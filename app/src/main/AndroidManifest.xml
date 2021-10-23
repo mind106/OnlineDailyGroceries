@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.rajendra.onlinedailygroceries">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,6 +11,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.OnlineDailyGroceries">
+        <activity
+            android:name=".Thanhtoan"
+            android:exported="true" />
+        <activity
+            android:name=".PayActivity"
+            android:exported="true"></activity>
+        <activity
+            android:name=".Cart"
+            android:exported="true"></activity>
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Login_Register"
+            android:exported="true" />
         <activity
             android:name=".ProductDetails"
             android:exported="true" />

@@ -103,7 +103,7 @@
         app:srcCompat="@drawable/ic_baseline_keyboard_arrow_left_24" />
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/shoppingcart"
         android:layout_width="185dp"
         android:layout_height="50dp"
         android:layout_marginTop="43dp"
@@ -122,10 +122,10 @@
         android:fontFamily="sans-serif-smallcaps"
         android:text="Buy Now"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+        app:layout_constraintBottom_toBottomOf="@+id/shoppingcart"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView7"
-        app:layout_constraintTop_toTopOf="@+id/imageView7"
+        app:layout_constraintStart_toEndOf="@+id/shoppingcart"
+        app:layout_constraintTop_toTopOf="@+id/shoppingcart"
         tools:ignore="MissingConstraints" />
 
     <ImageView

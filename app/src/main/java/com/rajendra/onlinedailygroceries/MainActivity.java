@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.rajendra.onlinedailygroceries.adapter.CategoryAdapter;
 import com.rajendra.onlinedailygroceries.adapter.DiscountedProductAdapter;
@@ -33,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
     List<RecentlyViewed> recentlyViewedList;
 
     ImageView allCategory;
+    ImageView login_register;
+    ImageView cart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +44,17 @@ public class MainActivity extends AppCompatActivity {
         discountRecyclerView = findViewById(R.id.discountedRrcycler);
         categoryRecyclerView = findViewById(R.id.categoryRecycler);
         allCategory = findViewById(R.id.allCategoryImage);
+        cart = findViewById(R.id.shoppingcart);
         recentlyViewedRecycler = findViewById(R.id.recently_item);
+        login_register = findViewById(R.id.user);
+
+        login_register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, Login_Register.class);
+                startActivity(i);
+            }
+        });
 
         allCategory.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,8 +65,18 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        // adding data to model
+        addDatatoModel();
+        try {
+            Intent intent = getIntent();
+            TextView textView = findViewById(R.id.txtHello);
+            textView.setText(intent.getStringExtra("username"));
+        }catch (Exception ex){
 
+        }
+
+    }
+
+    private void addDatatoModel() {
         discountedProductsList = new ArrayList<>();
         discountedProductsList.add(new DiscountedProducts(1, R.drawable.discountberry));
         discountedProductsList.add(new DiscountedProducts(2, R.drawable.discountbrocoli));
@@ -87,7 +110,6 @@ public class MainActivity extends AppCompatActivity {
         setDiscountedRecycler(discountedProductsList);
         setCategoryRecycler((categoryList));
         setRecentlyViewedRecycler(recentlyViewedList);
-
     }
 
     private void setDiscountedRecycler(List<DiscountedProducts> dataList) {
@@ -109,5 +131,11 @@ public class MainActivity extends AppCompatActivity {
         recentlyViewedRecycler.setLayoutManager(layoutManager);
         recentlyViewedAdapter = new RecentlyViewedAdapter(this,recentlyViewedDataList);
         recentlyViewedRecycler.setAdapter(recentlyViewedAdapter);
+    }
+
+
+    public void cart11(View view){
+    Intent i = new Intent(MainActivity.this, Cart.class);
+    startActivity(i);
     }
 }
