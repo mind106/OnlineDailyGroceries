@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "764716517333",
+    "project_id": "online-daily-groceries-cf61f",
+    "storage_bucket": "online-daily-groceries-cf61f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:764716517333:android:a2c3924a97d3d0c0841f5c",
+        "android_client_info": {
+          "package_name": "com.rajendra.onlinedailygroceries"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "764716517333-3flvjj5g80lerqsjbgg1dgkd16b56l05.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCR4XEBi1d-keULZ1JpkMio_aqVzE3xCp8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "764716517333-3flvjj5g80lerqsjbgg1dgkd16b56l05.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
